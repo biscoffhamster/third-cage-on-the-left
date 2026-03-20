@@ -12,10 +12,17 @@ book:
   search: true
   chapters:
     - index.qmd
-    - book/01-preface-and-life-in-the-zoo.qmd
-    - book/02-fishy-tales-and-george-cansdale.qmd
-    - book/03-pets-and-prep-school.qmd
-    - book/04-monkton-years.qmd
+    - book/01-preface.qmd
+    - book/02-life-in-the-zoo.qmd
+    - book/03-the-gold-coast-years.qmd
+    - book/04-mr-ezra-and-mandarins.qmd
+    - book/05-the-duke-of-bedford-and-some-fishy-tales.qmd
+    - book/06-george-cansdale.qmd
+    - book/07-pets-at-home.qmd
+    - book/08-the-eagle-has-landed-and-family-fortunes.qmd
+    - book/09-prep-school-high-days.qmd
+    - book/10-monkton-combe-school-1960-to-1961.qmd
+    - book/11-gun-games-with-the-ccf.qmd
 
 format:
   html:

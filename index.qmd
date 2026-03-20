@@ -1,0 +1,20 @@
+---
+title: "Third Cage on the Left"
+subtitle: "Growing up in London Zoo in the 1950s"
+---
+
+Third Cage on the Left is now set up as a Quarto book that can be published on GitHub Pages from the docs directory.
+
+This edition is generated from the manuscript PDF in the repository. The extracted text is readable, but it still needs editorial review for PDF artifacts, repeated social-post framing, and chapter polish.
+
+## Build Workflow
+
+1. Run `python3 scripts/build_from_pdf.py` to regenerate the book source files from the PDF.
+2. Run `quarto render` to publish the rendered site into `docs/`.
+3. Push `main` and GitHub Pages will serve the updated book.
+
+## Source Files
+
+- The manuscript source PDF is `Page 1 to 10 THIRD CAGE ON THE LEFT.pdf`.
+- The generated chapter files live in `book/`.
+- The Quarto project configuration is in `_quarto.yml`.

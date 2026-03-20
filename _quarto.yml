@@ -1,0 +1,25 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Third Cage on the Left"
+  author: "Richard Cansdale"
+  subtitle: "Growing up in London Zoo in the 1950s"
+  site-url: "https://biscoffhamster.github.io/third-cage-on-the-left/"
+  reader-mode: true
+  page-navigation: true
+  search: true
+  chapters:
+    - index.qmd
+    - book/01-preface-and-life-in-the-zoo.qmd
+    - book/02-fishy-tales-and-george-cansdale.qmd
+    - book/03-pets-and-prep-school.qmd
+    - book/04-monkton-years.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc-depth: 3
+    smooth-scroll: true

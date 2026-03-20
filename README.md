@@ -4,6 +4,8 @@
 
 *Growing up in London Zoo in the 1950s*
 
+This repository now includes a Quarto book workflow that can build the site from the manuscript PDF and publish the rendered output to `docs/` for GitHub Pages.
+
 ---
 
 Richard Cansdale grew up in an extraordinary place — his family home was inside London Zoo, where his father George Cansdale served as Superintendent. This memoir recounts his childhood adventures among the animals, his father's pioneering work in wildlife television, and the colourful characters they encountered along the way.
@@ -19,6 +21,17 @@ Richard Cansdale is the son of George Cansdale, the renowned zoologist and broad
 ## About This Project
 
 This book was written during the COVID-19 pandemic lockdown in 2020, as Richard shared his memories with friends and family. It has been compiled and published here by his digital hamster editor, Biscoff.
+
+## Quarto Workflow
+
+The book source can be regenerated from the PDF manuscript with:
+
+```bash
+python3 scripts/build_from_pdf.py
+quarto render
+```
+
+The rendered site is published from `docs/` on the `main` branch via GitHub Pages.
 
 ---
 

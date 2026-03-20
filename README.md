@@ -33,6 +33,40 @@ quarto render
 
 The rendered site is published from `docs/` on the `main` branch via GitHub Pages.
 
+## Editing Workflow
+
+For normal book editing, treat the Quarto files in `book/` as the live manuscript.
+
+1. Edit the relevant chapter file in `book/`.
+2. Update `index.qmd` or `_quarto.yml` if you need to change front matter, chapter titles, or chapter order.
+3. Preview locally with `quarto preview`, or render with `quarto render`.
+4. Commit the source edits.
+
+The PDF import script is now a maintenance tool rather than the normal editing path.
+
+- Use `python3 scripts/build_from_pdf.py` only if you want to regenerate chapters from `Page 1 to 10 THIRD CAGE ON THE LEFT.pdf`.
+- Regenerating from the PDF can overwrite manual edits in `book/`.
+- If a chapter needs editorial improvement, edit the `.qmd` file directly instead of rerunning the importer.
+
+## GitHub Pages Workflow
+
+This repository now includes a GitHub Actions workflow at `.github/workflows/publish.yml` that renders the Quarto book and deploys it to GitHub Pages from source.
+
+Recommended publishing flow:
+
+1. Edit the Quarto source in `book/`.
+2. Optionally preview locally with `quarto preview`.
+3. Push changes to `main`.
+4. GitHub Actions renders the site and deploys it to GitHub Pages.
+
+One-time GitHub configuration:
+
+1. Open the repository settings on GitHub.
+2. Go to **Pages**.
+3. Set the source to **GitHub Actions**.
+
+You can still run `quarto render` locally when you want to verify the build before pushing.
+
 ---
 
 *Editor: Biscoff (biscoffhamster@gmail.com)*

@@ -4,7 +4,7 @@
 
 *Growing up in London Zoo in the 1950s*
 
-This repository now includes a Quarto book workflow that can build the site from the manuscript PDF and publish the rendered output to `docs/` for GitHub Pages.
+This repository now includes a Quarto book workflow that can build the site from the manuscript PDF and publish the rendered output with GitHub Actions for GitHub Pages.
 
 ---
 
@@ -31,7 +31,7 @@ python3 scripts/build_from_pdf.py
 quarto render
 ```
 
-The rendered site is published from `docs/` on the `main` branch via GitHub Pages.
+Local renders are written to `_site/`, which is treated as generated output and not committed.
 
 ## Editing Workflow
 
@@ -40,7 +40,7 @@ For normal book editing, treat the Quarto files in `book/` as the live manuscrip
 1. Edit the relevant chapter file in `book/`.
 2. Update `index.qmd` or `_quarto.yml` if you need to change front matter, chapter titles, or chapter order.
 3. Preview locally with `quarto preview`, or render with `quarto render`.
-4. Commit the source edits.
+4. Commit the source edits and push `main`.
 
 The PDF import script is now a maintenance tool rather than the normal editing path.
 
@@ -57,7 +57,7 @@ Recommended publishing flow:
 1. Edit the Quarto source in `book/`.
 2. Optionally preview locally with `quarto preview`.
 3. Push changes to `main`.
-4. GitHub Actions renders the site and deploys it to GitHub Pages.
+4. GitHub Actions renders the site into `_site/` and deploys it to GitHub Pages.
 
 One-time GitHub configuration:
 
@@ -65,7 +65,7 @@ One-time GitHub configuration:
 2. Go to **Pages**.
 3. Set the source to **GitHub Actions**.
 
-You can still run `quarto render` locally when you want to verify the build before pushing.
+You can still run `quarto render` locally when you want to verify the build before pushing. The generated `_site/` directory is disposable and can be removed or regenerated at any time.
 
 ---
 
